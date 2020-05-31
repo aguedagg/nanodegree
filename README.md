@@ -1,26 +1,37 @@
-# Sandwich Club Project Starter Code
+# Sandwich Club Project
 
-## Project Overview
-In this project, you will complete the **Sandwich Club** app to
-show the details of each sandwich once it is selected.
+In this project, you will complete the **Sandwich Club** app to show the details of each sandwich once it is selected.
 
-## Why this Project
+## Table of contents
+* [General info](#general-info)
+* [Rubric](#rubric)
+* [Screenshots](#screenshots)
 
-Building a layout and populating its fields from data received as JSON
-is a common task for Android Developers. Although JSON parsing is usually
-done using libraries, writing the JSON parsing for  this project will
-help you to better understand how it is processed.
+## General info
+This is the first project of the Udacity Android Developer Nanodegree Program.
 
-## What Will I Learn?
-Through this project, you will:
-- Learn how to submit projects for review
-- Practice JSON parsing to a model object
-- Design an activity layout
-- Populate all fields in the layout accordingly
+## Rubric
 
-## How Do I Complete this Project?
-Download the [Sandwich Club app starter code.](https://github.com/udacity/sandwich-club-starter-code)
+#### Common Project Requirements
 
-Design the layout for the detail activity so the different elements
-display in a sensible way. Implement the JSON parsing in JsonUtils so it
-produces a Sandwich Object that can be used to populate the UI that you designed.
+| CRITERIA  | MEETS SPECIFICATIONS  |
+|---|---|
+| App is written solely in the Java Programming Language  | App is written solely in the Java Programming Language |
+| App conforms to common standards found in the Android Nanodegree General Project Guidelines NOTE: It is okay if the app does not handle rotation properly or does not restore the data using onSaveInstanceState/onRestoreInstanceState) | App conforms to common standards found in the Android Nanodegree General Project Guidelines NOTE: It is okay if the app does not handle rotation properly or does not restore the data using onSaveInstanceState/onRestoreInstanceState) |   |
+| Submission must use stable release versions of all libraries, Gradle, and Android Studio. Debug/beta/canary versions are not acceptable.  | App utilizes stable release versions of all libraries, Gradle, and Android Studio.  |
+
+#### Core Functionality
+
+| CRITERIA  |  MEETS SPECIFICATIONS |
+|---|---|
+| JSON data is parsed correctly to a Sandwich object in JsonUtils | JSON data is parsed correctly to a Sandwich object in JsonUtils  |
+| JSON is parsed without using 3rd party libraries | JSON is parsed without using 3rd party libraries  |
+| DetailActivity shows all Sandwich details correctly | DetailActivity shows all Sandwich details correctly |
+| Detail layout includes a ScrollView so all the details are visible in small screen devices  | Detail layout includes a ScrollView so all the details are visible in small screen devices |
+| Sandwich details are shown in a sensible layout. For example, ingredients appear next to the ingredients label | Sandwich details are shown in a sensible layout. For example, ingredients appear next to the ingredients label |
+
+## Screenshots
+| Main Activity - List of sandwiches | Detail Activity |
+| :---: | :---: |
+| <img src="./docs/Screenshot_main.png" width="80%"/> | <img src="./docs/Screenshot_shawarma.png" width="80%"/> |
+ 
