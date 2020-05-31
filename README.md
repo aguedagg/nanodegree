@@ -1,4 +1,5 @@
 # Sandwich Club Project
+![Minimum API level](https://img.shields.io/badge/API-16+-yellow)
 
 In this project, you will complete the **Sandwich Club** app to show the details of each sandwich once it is selected.
 
