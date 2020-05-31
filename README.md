@@ -1,4 +1,7 @@
 # Sandwich Club Project
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d4ce9e28092d47df87d51aa7e38b6e79)](https://app.codacy.com/manual/aguedagg/nanodegree?utm_source=github.com&utm_medium=referral&utm_content=aguedagg/nanodegree&utm_campaign=Badge_Grade_Settings)
+
 ![Minimum API level](https://img.shields.io/badge/API-16+-yellow)
 
 In this project, you will complete the **Sandwich Club** app to show the details of each sandwich once it is selected.
