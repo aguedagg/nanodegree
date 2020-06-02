@@ -3,8 +3,9 @@ package com.udacity.sandwichclub;
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.text.Html;
-import android.view.View;
+import android.text.TextUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -84,29 +85,20 @@ public class DetailActivity extends AppCompatActivity {
         }
         // Aka
         List<String> akaList = sandwich.getAlsoKnownAs();
-        if (akaList.isEmpty()) {
+        if (akaList == null || akaList.isEmpty()) {
             akaTextView.setVisibility(GONE);
         } else {
-            String akaString = "<b>" + getText(R.string.detail_also_known_as_label) + "</b> ".concat(listToString(akaList));
+            String akaString = "<b>" + getText(R.string.detail_also_known_as_label) + "</b> ".concat(TextUtils.join(", ", akaList));
             akaTextView.setText(Html.fromHtml(akaString));
         }
 
         // Ingredients
         List<String> ingredientsList = sandwich.getIngredients();
-        if (ingredientsList.isEmpty()) {
+        if (ingredientsList == null || ingredientsList.isEmpty()) {
             ingredientsTextView.setVisibility(GONE);
         } else {
-            String ingredientsString = "<b>" + getText(R.string.detail_ingredients_label) + "</b>".concat(listToString(ingredientsList));
+            String ingredientsString = "<b>" + getText(R.string.detail_ingredients_label) + "</b>".concat(TextUtils.join(", ", ingredientsList));
             ingredientsTextView.setText(Html.fromHtml(ingredientsString));
         }
-    }
-
-    private String listToString(List<String> itemsList) {
-
-        String itemsString = itemsList.get(0);
-        for (int i=1; i<itemsList.size()-1; i++) {
-            itemsString = itemsString.concat(", " + itemsList.get(i));
-        }
-        return itemsString;
     }
 }

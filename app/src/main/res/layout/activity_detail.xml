@@ -48,8 +48,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginTop="@dimen/textview_margin_top"
+            android:layout_marginBottom="@dimen/textview_margin_bottom" />
 
         <!-- Origin -->
         <TextView
@@ -58,8 +58,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginTop="@dimen/textview_margin_top"
+            android:layout_marginBottom="@dimen/textview_margin_bottom" />
 
         <!-- Ingredients -->
         <TextView
@@ -68,8 +68,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginTop="@dimen/textview_margin_top"
+            android:layout_marginBottom="@dimen/textview_margin_bottom" />
 
         <!-- Description -->
         <TextView
@@ -78,8 +78,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginTop="@dimen/textview_margin_top"
+            android:layout_marginBottom="@dimen/textview_margin_bottom"/>
     </LinearLayout>
 
     </ScrollView>
