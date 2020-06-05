@@ -45,8 +45,11 @@ This is the first project of the Udacity Android Developer Nanodegree Program.
 **Gradle Version:** 3.6.3
 
 **Dependencies:**
-- com.android.support:appcompat-v7:28.0.0
+- androidx.appcompat:appcompat:1.1.0
+- androidx.recyclerview:recyclerview:1.1.0
+- androidx.cardview:cardview:1.0.0
 - com.squareup.picasso:picasso:2.5.2
+- jp.wasabeef:picasso-transformations:2.2.1
 
 **Android Studio Version:** 3.6.3 (Stable Release)
 
