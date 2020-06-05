@@ -3,36 +3,43 @@ package com.udacity.sandwichclub;
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.udacity.sandwichclub.adapters.SandwichArrayAdapter;
+import com.udacity.sandwichclub.adapters.SandwichRecyclerAdapter;
+import com.udacity.sandwichclub.interfaces.ListItemClickListener;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ListItemClickListener {
+
+    private RecyclerView mRecyclerView;
+    private SandwichRecyclerAdapter mSandwichAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String[] sandwiches = getResources().getStringArray(R.array.sandwich_details);
-        SandwichArrayAdapter adapter = new SandwichArrayAdapter(this, sandwiches);
+        mRecyclerView = (RecyclerView) findViewById(R.id.sandwiches_recyclerview);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        mRecyclerView.setLayoutManager(layoutManager);
 
-        // Simplification: Using a ListView instead of a RecyclerView
-        ListView listView = findViewById(R.id.sandwiches_listview);
-        listView.setAdapter(adapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                launchDetailActivity(position);
-            }
-        });
+        mRecyclerView.setHasFixedSize(true);
+
+        mSandwichAdapter = new SandwichRecyclerAdapter(this);
+        mRecyclerView.setAdapter(mSandwichAdapter);
+
+        String[] sandwiches = getResources().getStringArray(R.array.sandwich_details);
+        mSandwichAdapter.setSandwichData(sandwiches);
     }
 
     private void launchDetailActivity(int position) {
         Intent intent = new Intent(this, DetailActivity.class);
         intent.putExtra(DetailActivity.EXTRA_POSITION, position);
         startActivity(intent);
+    }
+
+    @Override
+    public void onSandwichItemClick(int clickedItemIndex) {
+        launchDetailActivity(clickedItemIndex);
     }
 }
